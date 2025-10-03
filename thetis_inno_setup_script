@@ -1,0 +1,22 @@
+; -- ThetisInstaller.iss --
+
+[Setup]
+AppName=Thetis Key Manager
+AppVersion=1.1.18
+DefaultDirName={autopf}\Thetis Key Manager
+DefaultGroupName=Thetis Key Manager
+OutputDir=.
+OutputBaseFilename=Thetis_Key_Manager_Setup
+Compression=lzma
+SolidCompression=yes
+
+[Files]
+Source: "C:\InstallerFiles\Thetis\Thetis key ManageR_1.1.18_1.exe"; DestDir: "{app}"; Flags: ignoreversion
+
+[Icons]
+Name: "{group}\Thetis Key Manager"; Filename: "{app}\Thetis key ManageR_1.1.18_1.exe"
+Name: "{group}\Uninstall Thetis Key Manager"; Filename: "{uninstallexe}"
+Name: "{commondesktop}\Thetis Key Manager"; Filename: "{app}\Thetis key ManageR_1.1.18_1.exe"; Tasks: desktopicon
+
+[Tasks]
+Name: "desktopicon"; Description: "Create a &desktop icon"; GroupDescription: "Additional icons:"
